@@ -8,7 +8,8 @@ const nextConfig = {
   },
   assetPrefix: isProd ? '/nextjs-test/' : '',
   basePath: isProd ? '/nextjs-test' : '',
-  output: 'export'
+  output: 'export',
+  distDir: 'out'
 };
 
 export default nextConfig;
