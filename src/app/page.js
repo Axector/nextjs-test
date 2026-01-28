@@ -2,8 +2,6 @@ import Image from "@/components/Image";
 import styles from "./page.module.css";
 
 export default function Home() {
-  console.log('XXX process.env.API_KEY:', process.env.API_KEY);
-
   return (
     <div className={styles.page}>
       <main className={styles.main}>
@@ -18,6 +16,8 @@ export default function Home() {
         <div className={styles.intro}>
           <h1>To get started, edit the page.js file.</h1>
           <p>
+            {process.env.API_KEY}
+            <br />
             Looking for a starting point or more instructions? Head over to{" "}
             <a
               href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
