@@ -1,6 +1,5 @@
-import Image from "next/image";
+import Image from "@/components/Image";
 import styles from "./page.module.css";
-import { config } from "next/dist/build/templates/pages";
 
 export default function Home() {
   return (
@@ -8,7 +7,7 @@ export default function Home() {
       <main className={styles.main}>
         <Image
           className={styles.logo}
-          src={`${config.basePath}/next.svg`}
+          src="/next.svg"
           alt="Next.js logo"
           width={100}
           height={20}
