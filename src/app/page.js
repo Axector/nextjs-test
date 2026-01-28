@@ -2,6 +2,10 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+
+  console.log('XXX process.env', process.env);
+  console.log('XXX process.env.NODE_ENV', process.env.NODE_ENV);
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
