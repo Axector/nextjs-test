@@ -1,10 +1,13 @@
-import getBaseUrl from "@/utils/getBaseUrl";
 import Image from "next/image";
+import nextConfig from "../../../next.config.mjs";
 
-export const MyImage = (props) => {
-    const src = `${getBaseUrl()}${props.src}`;
+export const CustomImage = (props) => {
+    const newProps = {
+        ...props,
+        src: `${nextConfig.basePath}${props.src}`,
+    };
 
-    return <Image {...props} src={src} alt={props.alt} />;
+    return <Image {...newProps} alt={props.alt} />;
 };
 
-export default MyImage;
+export default CustomImage;
