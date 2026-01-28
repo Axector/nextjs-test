@@ -2,6 +2,8 @@ import Image from "@/components/Image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  console.log('XXX process.env.API_KEY:', process.env.API_KEY);
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
