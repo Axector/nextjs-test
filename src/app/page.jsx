@@ -1,22 +1,22 @@
 import Image from "@/components/Image";
-import styles from "./page.module.css";
+import "./page.style.scss";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div className="page">
+      <main className="main">
         <Image
-          className={styles.logo}
+          className="logo"
           src="/next.svg"
           alt="Next.js logo"
           width={100}
           height={20}
           priority
         />
-        <div className={styles.intro}>
+        <div className="intro">
           <h1>To get started, edit the page.js file.</h1>
           <p>
-            process.env.NEXT_PUBLIC_API_KEY: {process.env.NEXT_PUBLIC_API_KEY}
+            process.env.NEXT_PUBLIC_FIREBASE_API_KEY: <span style={{color: 'red'}}>{'[ '}{process.env.NEXT_PUBLIC_FIREBASE_API_KEY || '-'}{' ]'}</span>
             <br />
             Looking for a starting point or more instructions? Head over to{" "}
             <a
@@ -37,15 +37,15 @@ export default function Home() {
             center.
           </p>
         </div>
-        <div className={styles.ctas}>
+        <div className="ctas">
           <a
-            className={styles.primary}
+            className="primary"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Image
-              className={styles.logo}
+              className="logo"
               src="/vercel.svg"
               alt="Vercel logomark"
               width={16}
@@ -54,7 +54,7 @@ export default function Home() {
             Deploy Now
           </a>
           <a
-            className={styles.secondary}
+            className="secondary"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"

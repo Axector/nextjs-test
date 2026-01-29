@@ -9,7 +9,10 @@ const nextConfig = {
   assetPrefix: isProd ? '/nextjs-test/' : '',
   basePath: isProd ? '/nextjs-test' : '',
   output: 'export',
-  distDir: 'out'
+  distDir: 'out',
+  sassOptions: {
+    implementation: 'sass',
+  },
 };
 
 export default nextConfig;
