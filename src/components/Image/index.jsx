@@ -1,13 +1,3 @@
-import Image from "next/image";
-import nextConfig from "../../../next.config.mjs";
+import Image from './Image';
 
-export const CustomImage = (props) => {
-    const newProps = {
-        ...props,
-        src: `${nextConfig.basePath}${props.src}`,
-    };
-
-    return <Image {...newProps} alt={props.alt} />;
-};
-
-export default CustomImage;
+export default Image;

@@ -1,0 +1,23 @@
+:root {
+  --header-link--color--not-active: #121010;
+  --header-link--color--not-active-hover: #5B5A57;
+}
+
+a {
+  &.active {
+    pointer-events: none;
+  }
+
+  &:not(.active) {
+    color: var(--header-link--color--not-active);
+
+    &::before,
+    &::after {
+      width: 0;
+    }
+
+    &:hover {
+      color: var(--header-link--color--not-active-hover);
+    }
+  }
+}

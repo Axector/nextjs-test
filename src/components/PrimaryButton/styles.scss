@@ -1,0 +1,71 @@
+:root {
+  --primary-button--color: #fff;
+  --primary-button--color--active: #fff;
+  --primary-button--background-color: #9d5248;
+  --primary-button--background-color--hover: #b05c50;
+  --primary-button--background-color--active: #8d4a41;
+  --primary-button--border-color: #9d5248;
+  --primary-button--border-color--hover: #7a4038;
+  --primary-button--border-color--active: #8d4a41;
+  --primary-button--lines--background-color: #f7f5f1;
+}
+
+.primary-button {
+  color: var(--primary-button--color);
+  background-color: var(--primary-button--background-color);
+  border-color: var(--primary-button--border-color);
+
+  &:active {
+    color: var(--primary-button--color--active);
+    background-color: var(--primary-button--background-color--active);
+    border-color: var(--primary-button--border-color--active);
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    pointer-events: none;
+    height: 1px;
+    background-color: var(--primary-button--lines--background-color);
+    transition: width 200ms cubic-bezier(0.42, 0, 0.58, 1), left 200ms cubic-bezier(0.42, 0, 0.58, 1), right 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+
+  &::after {
+    bottom: .3125rem;
+  }
+
+  &::before {
+    top: .3125rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .primary-button {
+    color: var(--primary-button--color);
+    background-color: var(--primary-button--background-color);
+    border-color: var(--primary-button--border-color);
+
+    &:hover:not(:active) {
+      background-color: var(--primary-button--background-color--hover);
+      border-color: var(--primary-button--border-color--hover);
+
+      &::after,
+      &::before {
+        right: .625rem;
+        left: .625rem;
+        width: calc(100% - 1.25rem);
+      }
+    }
+
+    &:hover:active {
+      color: var(--primary-button--color--active);
+      background-color: var(--primary-button--background-color--active);
+      border-color: var(--primary-button--border-color--active);
+    }
+  }
+}
